@@ -1,14 +1,14 @@
 [tool.poetry]
-name = "Lyupo7_brain_games"
+name = "LyuPo7_brain_games"
 version = "0.1.0"
-description = ""
+description = "First project with Hexlet"
 authors = ["LyuPo <lport@frtk.ru>"]
 packages = [
   { include = "brain_games" },
 ]
 
 [tool.poetry.dependencies]
-python = "^2.7"
+python = "^3.6"
 
 [tool.poetry.dev-dependencies]
 

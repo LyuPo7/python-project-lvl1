@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "LyuPo7_brain_games"
-version = "0.5.0"
+version = "0.6.0"
 description = "First project with Hexlet"
 authors = ["LyuPo <lport@frtk.ru>"]
 packages = [
@@ -15,8 +15,9 @@ prompt = "^0.4.1"
 wemake-python-styleguide = "^0.13.4"
 
 [tool.poetry.scripts]
-brain-games = "brain_games.scripts.brain_games:main"
-brain-even = "brain_games.scripts.brain_even:brain_even"
+brain_games = "brain_games.scripts.brain_games:main"
+brain_even = "brain_games.scripts.games.brain_even:brain_even"
+brain_calc = "brain_games.scripts.games.brain_even:brain_calc"
 
 [[tool.poetry.source]]
 name = "PyPiTest"

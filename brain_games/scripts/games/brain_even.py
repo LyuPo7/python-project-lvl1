@@ -29,7 +29,7 @@ def brain_even(name_player):
 
         if (user_answer == correct_answer):
             print('Correct!')
-            init_game = 0
+
             if (intent_number == 3):
                 print('Congratulations, ' + name_player + '!')
         else:
@@ -37,3 +37,4 @@ def brain_even(name_player):
             correct_answer)
         
         intent_number += 1
+        init_game = 0

@@ -6,6 +6,6 @@
 
 <a href="https://travis-ci.org/LyuPo7/python-project-lvl1"><img src="https://travis-ci.org/LyuPo7/python-project-lvl1.svg?branch=master"></a>
 
-https://asciinema.org/a/VFBG7NjiyDhArpySM6pmJ0rlD
+<a href="https://asciinema.org/a/303493" target="_blank"><img src="https://asciinema.org/a/303493.svg" /></a>
   
  

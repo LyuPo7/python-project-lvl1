@@ -5,5 +5,7 @@
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/test_coverage"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage" /></a>
 
 <a href="https://travis-ci.org/LyuPo7/python-project-lvl1"><img src="https://travis-ci.org/LyuPo7/python-project-lvl1.svg?branch=master"></a>
+
+https://asciinema.org/a/VFBG7NjiyDhArpySM6pmJ0rlD
   
  

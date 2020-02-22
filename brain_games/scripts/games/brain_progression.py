@@ -10,7 +10,7 @@ def ask_user_progression(name_player):
     diff = random.randint(0, 10)
     consequence = list(map(lambda x : first_number + x * diff, range(0,10)))
 
-    secret_number = random.randint(0, 10)
+    secret_number = random.randint(0, 9)
     secret_consequence = consequence[:]
     secret_consequence[secret_number] = '..'
 

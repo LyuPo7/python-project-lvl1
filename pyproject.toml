@@ -18,6 +18,7 @@ wemake-python-styleguide = "^0.13.4"
 brain_games = "brain_games.scripts.brain_games:main"
 brain_even = "brain_games.scripts.games.brain_even:brain_even"
 brain_calc = "brain_games.scripts.games.brain_even:brain_calc"
+brain_progression = "brain_games.scripts.games.brain_even:brain_progression"
 
 [[tool.poetry.source]]
 name = "PyPiTest"

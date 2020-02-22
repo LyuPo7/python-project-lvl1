@@ -4,6 +4,7 @@ from brain_games.cli import welcome_user, game_choice
 from brain_games.scripts.games.brain_even import brain_even
 from brain_games.scripts.games.brain_calc import brain_calc
 from brain_games.scripts.games.brain_gcd import brain_gcd
+from brain_games.scripts.games.brain_progression import brain_progression
 
 def main():
     """Run project."""
@@ -16,7 +17,8 @@ def main():
         brain_calc(name)
     elif (choice == '2'):
         brain_gcd(name)
-
+    elif (choice == '3'):
+        brain_progression(name)
 
 if __name__ == '__main__':
     main()

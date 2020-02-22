@@ -14,7 +14,8 @@ def game_choice():
 	print('Choice the game:\n')
 	print('For play brain_even enter: 0\n')
 	print('For play brain_calc enter: 1\n')
-	print('For play brain_calc enter: 2\n')
+	print('For play brain_gcd enter: 2\n')
+	print('For play brain_progression enter: 3\n')
 	user_choice = prompt.string('Make your choice: ')
 
 	return str(user_choice)	

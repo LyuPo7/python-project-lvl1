@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "LyuPo7_brain_games"
-version = "0.9.1"
+version = "0.9.2"
 description = "First project with Hexlet"
 authors = ["LyuPo <lport@frtk.ru>"]
 packages = [

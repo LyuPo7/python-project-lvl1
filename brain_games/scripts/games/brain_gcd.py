@@ -1,6 +1,8 @@
 """Brain-gcd function."""
 # This Python file uses the following encoding: utf-8
-import random, math
+import random
+import math
+import prompt
 
 
 def ask_user_gcd(name_player):
@@ -8,7 +10,7 @@ def ask_user_gcd(name_player):
     number_1 = random.randint(0, 100)
     number_2 = random.randint(0, 100)
     print('Question: ', number_1, number_2)
-    user_answer = input('Enter your answer,' + name_player + ': ')
+    user_answer = prompt.string(' '.join(['Enter your answer,', name_player, ': ']))
     correct_answer = math.gcd(number_1, number_2)
     return (correct_answer, user_answer)
 
@@ -27,11 +29,10 @@ def brain_gcd(name_player):
         if (int(user_answer) == int(correct_answer)):
             print('Correct!')
             if (intent_number == 3):
-                print('Congratulations, ' + name_player + '!')
+                print('Congratulations, ', name_player, '!')
         else:
-            print(user_answer, ' is wrong answer ;(. Correct answer was ', 
-            correct_answer)
-            print('Let\'s try again, ' + name_player + '!')
-        
+            print(user_answer, ' is wrong answer ;(. Correct answer was ', correct_answer)
+            print("Let\'s try again, ", name_player, '!')
+
         init_game = 0
         intent_number += 1

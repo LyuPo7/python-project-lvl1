@@ -1,6 +1,7 @@
 """Brain-progression function."""
 # This Python file uses the following encoding: utf-8
-import random, math
+import random
+import prompt
 
 
 def ask_user_progression(name_player):
@@ -8,14 +9,14 @@ def ask_user_progression(name_player):
     consequence = []
     first_number = random.randint(0, 100)
     diff = random.randint(0, 10)
-    consequence = list(map(lambda x : first_number + x * diff, range(0,10)))
+    consequence = list(map(lambda el: first_number + el * diff, range(0, 10)))
 
     secret_number = random.randint(0, 9)
     secret_consequence = consequence[:]
     secret_consequence[secret_number] = '..'
 
     print('Question: ', secret_consequence)
-    user_answer = input('Enter your answer,' + name_player + ': ')
+    user_answer = prompt.string(' '.join(['Enter your answer,', name_player, ': ']))
 
     return (consequence[secret_number], user_answer)
 
@@ -34,11 +35,10 @@ def brain_progression(name_player):
         if (int(user_answer) == int(correct_answer)):
             print('Correct!')
             if (intent_number == 3):
-                print('Congratulations, ' + name_player + '!')
+                print('Congratulations, ', name_player, '!')
         else:
-            print(user_answer, ' is wrong answer ;(. Correct answer was ', 
-            correct_answer)
-            print('Let\'s try again, ' + name_player + '!')
-        
+            print(user_answer, ' is wrong answer ;(. Correct answer was ', correct_answer)
+            print("Let\'s try again, ", name_player, '!')
+
         init_game = 0
         intent_number += 1

@@ -1,12 +1,18 @@
-"""Progression Game module"""
 # This Python file uses the following encoding: utf-8
+
+"""Progression Game module."""
 import random
 
 
 def brain_progression():
-    """One round of brain_progression game.
-        Ask user missing number in the progression.
-        Return rule of the game, question and correct answer.
+    """One round function of brain_progression game.
+
+    Ask user missing number in the progression.
+
+    Returns:
+        rule(str) - rule of the game,
+        question(str),
+        correct_answer(str)
     """
     consequence = []
     first_number = random.randint(0, 100)

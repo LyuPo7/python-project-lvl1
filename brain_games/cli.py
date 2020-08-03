@@ -1,15 +1,26 @@
-"""Functions of project."""
 # This Python file uses the following encoding: utf-8
+
+"""Functions of project."""
 import prompt
 
 
 def welcome_user():
-	"""Welcoming user."""
+	"""Welcoming user.
+
+	Returns:
+		user_name(str)
+	"""
 	return prompt.string('May I have your name? ')
 
 
 def game_choice():
-	"""Choice the game."""
+	"""Choice the game.
+
+	Ask user which game would like to play.
+
+	Returns:
+		user's choice(str)
+	"""
 	print('Choice the game: ')
 	print('For play brain_even enter: 0')
 	print('For play brain_calc enter: 1')

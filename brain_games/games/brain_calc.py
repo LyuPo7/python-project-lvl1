@@ -1,12 +1,18 @@
-"""Calc Game module"""
 # This Python file uses the following encoding: utf-8
+
+"""Calc Game module."""
 import random
 
 
 def brain_calc():
-    """One round of brain_gds game.
-        Ask user the result of the expression.
-        Return rule of the game, question and correct answer
+    """One round function of brain_gds game.
+
+    Ask user the result of the expression.
+
+    Returns:
+        rule(str) - rule of the game,
+        question(str),
+        correct answer(str)
     """
     number_1 = random.randint(0, 100)
     number_2 = random.randint(0, 100)
@@ -20,6 +26,6 @@ def brain_calc():
         correct_answer = number_1 * number_2
 
     rule = 'What is the result of the expression?'
-    question = str(number_1) + operator + str(number_2)
+    question = ' '.join([str(number_1), operator, str(number_2)])
 
     return (rule, question, str(correct_answer))

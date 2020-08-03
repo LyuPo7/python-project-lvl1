@@ -1,5 +1,6 @@
-"""Main file of project."""
 # This Python file uses the following encoding: utf-8
+
+"""Main file of project."""
 from brain_games.cli import welcome_user, game_choice
 from brain_games.games.brain_even import brain_even
 from brain_games.games.brain_calc import brain_calc

@@ -1,13 +1,18 @@
-"""Prime Game module"""
 # This Python file uses the following encoding: utf-8
+
+"""Prime Game module."""
 import random
-import math
 
 
 def brain_prime():
-    """One round of brain_progression game.
-        Ask user if given number is prime.
-        Return rule of the game, question and correct answer.
+    """One round function of brain_progression game.
+
+    Ask user if given number is prime.
+
+    Returns:
+        rule(str) - rule of the game,
+        question(str),
+        correct_answer(str)
     """
     number = random.randint(0, 100)
     check_number = 2
@@ -17,7 +22,7 @@ def brain_prime():
             correct_answer = 'no'
             break
         check_number += 1
-    
+
     rule = 'Answer \"yes\" if given number is prime. Otherwise answer \"no\".'
     question = str(number)
 

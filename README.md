@@ -8,14 +8,14 @@ Project Description:
         brain_progression - in this mini-game you'll have to find missing number in the progression.
         brain_prime - in this mini-game you'll have to decide if the given number number is prime.
     Choose any game you would like to play. You'll have to give 3 correct answers in the row for win.
-    Play any game using brain-game comand.
+    Play any game using brain_games comand.
 
 Installation:
     for install type in command line:
         python3 -m pip install --no-cache-dir --index-url https://test.pypi.org/simple --extra-index-url https://pypi.org/simple lyupo7-brain-games
 
 How to play?
-    Use brain-games command.
+    Use brain_games command.
     Game will invite your 5 games to play.
     Choose any and play.
     (More information in asciinemas below)

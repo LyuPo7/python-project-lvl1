@@ -1,24 +1,26 @@
 # python-project-lvl1
 
-Project Description:
-    Project consists of 5 mini-brain-games:
-        brain_gcd - in this mini-game you'll have to calculate the GCD of two numbers.
-        brain_even - in this mini-game you'll have to decide if the given number is even.
-        brain_calc - in this mini-game you'll have to calculate the result of the expression.
-        brain_progression - in this mini-game you'll have to find missing number in the progression.
-        brain_prime - in this mini-game you'll have to decide if the given number number is prime.
-    Choose any game you would like to play. You'll have to give 3 correct answers in the row for win.
-    Play any game using brain_games comand.
+<h3>Project Description:</h3>
+    <p>Project consists of 5 mini-brain-games:</p>
+    <ul>
+        <li><b>brain_gcd</b> - in this mini-game you'll have to calculate the GCD of two numbers.</li>
+        <li><b>brain_even</b> - in this mini-game you'll have to decide if the given number is even.</li>
+        <li><b>brain_calc</b> - in this mini-game you'll have to calculate the result of the expression.</li>
+        <li><b>brain_progression</b> - in this mini-game you'll have to find missing number in the progression.</li>
+        <li><b>brain_prime</b> - in this mini-game you'll have to decide if the given number number is prime.</li>
+    </ul>
+    <p>Choose any game you would like to play. You'll have to give 3 correct answers in the row for win.
+    Play any game using <b>brain_games</b> command.</p>
 
-Installation:
-    for install type in command line:
-        python3 -m pip install --no-cache-dir --index-url https://test.pypi.org/simple --extra-index-url https://pypi.org/simple lyupo7-brain-games
+<h3>Installation:</h3>
+    <p>for install type in command line:</p>
+        <i>python3 -m pip install --no-cache-dir --index-url https://test.pypi.org/simple --extra-index-url https://pypi.org/simple lyupo7-brain-games</i>
 
-How to play?
-    Use brain_games command.
-    Game will invite your 5 games to play.
+<h3>How to play?</h3>
+    <p>Use <b>brain_games</b> command.</p>
+    Game will invite your 5 to play.
     Choose any and play.
-    (More information in asciinemas below)
+    <p><i>(More information in asciinemas below)</i></p>
 
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 

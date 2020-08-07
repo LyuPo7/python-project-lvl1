@@ -1,5 +1,11 @@
 # python-project-lvl1
 
+<a href="https://codeclimate.com/github/LyuPo7/python-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
+
+<a href="https://codeclimate.com/github/LyuPo7/python-project-lvl1/test_coverage"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage" /></a>
+
+<a href="https://travis-ci.org/LyuPo7/python-project-lvl1"><img src="https://travis-ci.org/LyuPo7/python-project-lvl1.svg?branch=master"></a>
+
 <h3>Project Description:</h3>
     <p>Project consists of 5 mini-brain-games:</p>
     <ul>
@@ -21,12 +27,6 @@
     Game will invite your 5 to play.
     Choose any and play.
     <p><i>(More information in asciinemas below)</i></p>
-
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
-
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/test_coverage"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage" /></a>
-
-<a href="https://travis-ci.org/LyuPo7/python-project-lvl1"><img src="https://travis-ci.org/LyuPo7/python-project-lvl1.svg?branch=master"></a>
 
 <a href="https://asciinema.org/a/303493" target="_blank"><img src="https://asciinema.org/a/303493.svg" /></a>
   

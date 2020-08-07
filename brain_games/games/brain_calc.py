@@ -3,14 +3,15 @@
 """Calc Game module."""
 import random
 
+Rule_Brain_Calc = 'What is the result of the expression?'
 
-def brain_calc():
+
+def play_round_brain_calc():
     """One round function of brain_gds game.
 
     Ask user the result of the expression.
 
     Returns:
-        rule(str) - rule of the game,
         question(str),
         correct answer(str)
     """
@@ -22,10 +23,9 @@ def brain_calc():
         correct_answer = number_1 + number_2
     elif operator == '-':
         correct_answer = number_1 - number_2
-    else:
+    elif operator == '*':
         correct_answer = number_1 * number_2
 
-    rule = 'What is the result of the expression?'
     question = ' '.join([str(number_1), operator, str(number_2)])
 
-    return (rule, question, str(correct_answer))
+    return (question, str(correct_answer))

@@ -3,7 +3,7 @@
 import prompt
 
 
-def engine(game, name_player):
+def engine(game, game_rule, name_player):
     """Engine function.
 
     Gets game function and starts it 3 times
@@ -12,6 +12,7 @@ def engine(game, name_player):
 
     Args:
         game: game to play
+        game_rule: rule of the game
         name_player: user's
     """
     init_game = 1
@@ -19,12 +20,13 @@ def engine(game, name_player):
     user_answer = 'no'
     intent_number = 1
 
+    print(game_rule)
+
     while (user_answer == correct_answer or init_game) and intent_number <= 3:
-        rule, question, correct_answer = game()
-        print(rule)
+        question, correct_answer = game()
         print('Question:', question)
         user_answer = prompt.string(
-            ' '.join(['Enter your answer,', name_player, ':']),
+            ''.join(['Enter your answer, ', name_player, ': ']),
         )
 
         if (user_answer == correct_answer):
@@ -35,7 +37,7 @@ def engine(game, name_player):
         else:
             print(
                 user_answer,
-                ' is wrong answer ;(. Correct answer was ',
+                ' is wrong answer :(. Correct answer was ',
                 correct_answer,
             )
 

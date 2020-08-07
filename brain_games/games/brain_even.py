@@ -3,14 +3,15 @@
 """Even game module."""
 import random
 
+Rule_Brain_Even = 'Answer \"yes\" if number even otherwise answer \"no\"'
 
-def brain_even():
+
+def play_round_brain_even():
     """One round function of brain_even game.
 
     Ask user if the number is even.
 
     Returns:
-        rule(str) - rule of the game,
         question(str),
         correct answer(str)
     """
@@ -20,6 +21,5 @@ def brain_even():
     if (number % 2):
         correct_answer = 'no'
 
-    rule = 'Answer \"yes\" if number even otherwise answer \"no\"'
     question = str(number)
-    return (rule, question, correct_answer)
+    return (question, correct_answer)

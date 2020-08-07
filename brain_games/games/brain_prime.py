@@ -3,14 +3,34 @@
 """Prime Game module."""
 import random
 
+Rule_Brain_Prime = """"Answer \"yes\" if given number is prime.
+Otherwise answer \"no\"."""
 
-def brain_prime():
+
+def check_multiplicity(dividend, divisor):
+    """Check multiplicity function.
+
+    Checks if given divisor evenly divides given dividend.
+
+    Args:
+        dividend(int): dividend
+        divisor(int): divisor
+
+    Returns:
+        True - if divisor evenly divides given dividend,
+        False - if divisor does not evenly divide given dividend.
+    """
+    if dividend % divisor == 0:
+        return True
+    return False
+
+
+def play_round_brain_prime():
     """One round function of brain_progression game.
 
     Ask user if given number is prime.
 
     Returns:
-        rule(str) - rule of the game,
         question(str),
         correct_answer(str)
     """
@@ -18,12 +38,11 @@ def brain_prime():
     check_number = 2
     correct_answer = 'yes'
     while check_number < number:
-        if (number % check_number == 0):
+        if check_multiplicity(number, check_number):
             correct_answer = 'no'
             break
         check_number += 1
 
-    rule = 'Answer \"yes\" if given number is prime. Otherwise answer \"no\".'
     question = str(number)
 
-    return (rule, question, correct_answer)
+    return (question, correct_answer)

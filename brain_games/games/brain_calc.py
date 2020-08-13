@@ -3,7 +3,7 @@
 """Calc Game module."""
 import random
 
-Rule_Brain_Calc = 'What is the result of the expression?'
+RULE_BRAIN_CALC = 'What is the result of the expression?'
 
 
 def play_round_brain_calc():

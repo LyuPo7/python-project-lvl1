@@ -3,7 +3,7 @@
 """Even game module."""
 import random
 
-Rule_Brain_Even = 'Answer \"yes\" if number even otherwise answer \"no\"'
+RULE_BRAIN_EVEN = 'Answer \"yes\" if number even otherwise answer \"no\"'
 
 
 def play_round_brain_even():

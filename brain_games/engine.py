@@ -15,14 +15,12 @@ def engine(game, game_rule, name_player):
         game_rule: rule of the game
         name_player: user's
     """
-    init_game = 1
-    correct_answer = 'yes'
-    user_answer = 'no'
+    max_intent = 3
     intent_number = 1
 
     print(game_rule)
 
-    while (user_answer == correct_answer or init_game) and intent_number <= 3:
+    while intent_number <= max_intent:
         question, correct_answer = game()
         print('Question:', question)
         user_answer = prompt.string(
@@ -40,6 +38,6 @@ def engine(game, game_rule, name_player):
                 ' is wrong answer :(. Correct answer was ',
                 correct_answer,
             )
+            break
 
         intent_number += 1
-        init_game = 0

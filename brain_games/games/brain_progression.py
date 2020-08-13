@@ -3,7 +3,7 @@
 """Progression Game module."""
 import random
 
-Rule_Brain_Progression = 'What number is missing in the progression?'
+RULE_BRAIN_PROGRESSION = 'What number is missing in the progression?'
 
 
 def play_round_brain_progression():

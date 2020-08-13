@@ -4,7 +4,7 @@
 import random
 import math
 
-Rule_Brain_Gcd = 'Find the greatest common divisor of given numbers.'
+RULE_BRAIN_GCD = 'Find the greatest common divisor of given numbers.'
 
 
 def play_round_brain_gcd():

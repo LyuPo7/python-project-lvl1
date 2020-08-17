@@ -3,7 +3,7 @@
 import prompt
 
 
-def engine(game, game_rule, name_player):
+def engine(game, name_player):
     """Engine function.
 
     Gets game function and starts it 3 times
@@ -18,10 +18,10 @@ def engine(game, game_rule, name_player):
     max_intent = 3
     intent_number = 1
 
-    print(game_rule)
+    print(game.RULE)
 
     while intent_number <= max_intent:
-        question, correct_answer = game()
+        question, correct_answer = game.generate_round()
         print('Question:', question)
         user_answer = prompt.string(
             ''.join(['Enter your answer, ', name_player, ': ']),
@@ -30,7 +30,7 @@ def engine(game, game_rule, name_player):
         if (user_answer == correct_answer):
             print('Correct!')
 
-            if (intent_number == 3):
+            if (intent_number == max_intent):
                 print('Congratulations, ', name_player, '!')
         else:
             print(

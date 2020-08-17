@@ -3,10 +3,11 @@
 """Calc Game module."""
 import random
 
-RULE_BRAIN_CALC = 'What is the result of the expression?'
+NAME = 'brain_calc'
+RULE = 'What is the result of the expression?'
 
 
-def play_round_brain_calc():
+def generate_round():
     """One round function of brain_gds game.
 
     Ask user the result of the expression.

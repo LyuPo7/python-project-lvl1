@@ -3,10 +3,45 @@
 """Even game module."""
 import random
 
-RULE_BRAIN_EVEN = 'Answer \"yes\" if number even otherwise answer \"no\"'
+NAME = 'brain_even'
+RULE = 'Answer \"yes\" if number even otherwise answer \"no\"'
 
 
-def play_round_brain_even():
+def is_even(number):
+    """Check even function.
+
+    Checks if given number is even.
+
+    Args:
+        number(int): number
+
+    Returns:
+        'yes' - if number is even,
+        'no' - if number is not even.
+    """
+    if (number % 2):
+        return False
+    return True
+
+
+def bool2word(sign):
+    """Convert bool value to word.
+
+    Converts bool value to word.
+
+    Args:
+        sign(str): sign
+
+    Returns:
+        'yes' - if sign is True,
+        'no' - if sign is False.
+    """
+    if sign:
+        return 'yes'
+    return 'no'
+
+
+def generate_round():
     """One round function of brain_even game.
 
     Ask user if the number is even.
@@ -16,10 +51,7 @@ def play_round_brain_even():
         correct answer(str)
     """
     number = random.randint(0, 100)
-    correct_answer = 'yes'
-
-    if (number % 2):
-        correct_answer = 'no'
+    correct_answer = bool2word(is_even(number))
 
     question = str(number)
     return (question, correct_answer)

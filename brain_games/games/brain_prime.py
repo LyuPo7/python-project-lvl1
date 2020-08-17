@@ -3,7 +3,8 @@
 """Prime Game module."""
 import random
 
-RULE_BRAIN_PRIME = """"Answer \"yes\" if given number is prime.
+NAME = 'brain_prime'
+RULE = """"Answer \"yes\" if given number is prime.
 Otherwise answer \"no\"."""
 
 
@@ -26,7 +27,7 @@ def check_multiplicity(dividend, divisor):
 
 
 def is_prime(number):
-    """Check multiplicity function.
+    """Check prime function.
 
     Checks if given number is prime.
 
@@ -34,18 +35,35 @@ def is_prime(number):
         number(int): number
 
     Returns:
-        'yes' - if number is prime,
-        'no' - if number is not prime.
+        True - if number is prime,
+        False - if number is not prime.
     """
     check_number = 2
     while check_number < number:
         if check_multiplicity(number, check_number):
-            return 'no'
+            return False
         check_number += 1
-    return 'yes'
+    return True
 
 
-def play_round_brain_prime():
+def bool2word(sign):
+    """Convert bool value to word.
+
+    Converts bool value to word.
+
+    Args:
+        sign(str): sign
+
+    Returns:
+        'yes' - if sign is True,
+        'no' - if sign is False.
+    """
+    if sign:
+        return 'yes'
+    return 'no'
+
+
+def generate_round():
     """One round function of brain_progression game.
 
     Ask user if given number is prime.
@@ -55,7 +73,7 @@ def play_round_brain_prime():
         correct_answer(str)
     """
     number = random.randint(0, 100)
-    correct_answer = is_prime(number)
+    correct_answer = bool2word(is_prime(number))
     question = str(number)
 
     return (question, correct_answer)

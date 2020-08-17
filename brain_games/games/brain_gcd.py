@@ -4,10 +4,11 @@
 import random
 import math
 
-RULE_BRAIN_GCD = 'Find the greatest common divisor of given numbers.'
+NAME = 'brain_gcd'
+RULE = 'Find the greatest common divisor of given numbers.'
 
 
-def play_round_brain_gcd():
+def generate_round():
     """One round function of brain_gds game.
 
     Ask user the GCD of two numbers.

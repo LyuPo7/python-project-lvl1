@@ -3,10 +3,11 @@
 """Progression Game module."""
 import random
 
-RULE_BRAIN_PROGRESSION = 'What number is missing in the progression?'
+NAME = 'brain_progression'
+RULE = 'What number is missing in the progression?'
 
 
-def play_round_brain_progression():
+def generate_round():
     """One round function of brain_progression game.
 
     Ask user missing number in the progression.

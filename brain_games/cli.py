@@ -2,15 +2,24 @@
 
 """Functions of project."""
 import prompt
-from brain_games.games.brain_even import play_round_brain_even
-from brain_games.games.brain_even import RULE_BRAIN_EVEN
-from brain_games.games.brain_calc import play_round_brain_calc, RULE_BRAIN_CALC
-from brain_games.games.brain_gcd import play_round_brain_gcd, RULE_BRAIN_GCD
-from brain_games.games.brain_progression import play_round_brain_progression
-from brain_games.games.brain_progression import RULE_BRAIN_PROGRESSION
-from brain_games.games.brain_prime import play_round_brain_prime
-from brain_games.games.brain_prime import RULE_BRAIN_PRIME
+
+from brain_games.games import brain_even, brain_calc, brain_gcd, brain_progression, brain_prime
 from brain_games.engine import engine
+
+
+def generate_games_dict():
+	"""Generate dictionary of the games.
+
+    Returns:
+        dictionary(dict) - dictionary of the games,
+    """
+	return {
+		'0': brain_even,
+		'1': brain_calc,
+		'2': brain_gcd,
+		'3': brain_progression,
+		'4': brain_prime,
+	}
 
 
 def welcome_user():
@@ -32,11 +41,9 @@ def request_choice():
 		user_choice(str): number of game
 	"""
 	print('Choice the game: ')
-	print('For play brain_even enter: 0')
-	print('For play brain_calc enter: 1')
-	print('For play brain_gcd enter: 2')
-	print('For play brain_progression enter: 3')
-	print('For play brain_prime enter: 4')
+	games_dict = generate_games_dict()
+	for number, game in games_dict.items():
+		print(' '.join(['For play', game.NAME, 'enter', number]))
 	return prompt.string('Make your choice: ')
 
 
@@ -47,14 +54,8 @@ def play_brain_games():
 	Ask user which game would like to play.
 	Call brain_games.engine for choosen game.
 	"""
-	games_dict = {
-		'0': (play_round_brain_even, RULE_BRAIN_EVEN),
-		'1': (play_round_brain_calc, RULE_BRAIN_CALC),
-		'2': (play_round_brain_gcd, RULE_BRAIN_GCD),
-		'3': (play_round_brain_progression, RULE_BRAIN_PROGRESSION),
-		'4': (play_round_brain_prime, RULE_BRAIN_PRIME),
-	}
 	name = welcome_user()
+	games_dict = generate_games_dict()
 	user_choice = request_choice()
-	game, game_rule = games_dict[user_choice]
-	engine(game, game_rule, name)
+	game = games_dict[user_choice]
+	engine(game, name)

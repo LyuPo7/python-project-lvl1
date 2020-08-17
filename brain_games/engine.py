@@ -12,7 +12,6 @@ def engine(game, name_player):
 
     Args:
         game: game to play
-        game_rule: rule of the game
         name_player: user's
     """
     max_intent = 3

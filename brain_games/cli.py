@@ -3,16 +3,17 @@
 """Functions of project."""
 import prompt
 
-from brain_games.games import brain_even, brain_calc, brain_gcd, brain_progression, brain_prime
+from brain_games.games import brain_even, brain_calc, brain_gcd
+from brain_games.games import brain_progression, brain_prime
 from brain_games.engine import engine
 
 
 def generate_games_dict():
 	"""Generate dictionary of the games.
 
-    Returns:
-        dictionary(dict) - dictionary of the games,
-    """
+	Returns:
+		dictionary(dict) - dictionary of the games,
+	"""
 	return {
 		'0': brain_even,
 		'1': brain_calc,

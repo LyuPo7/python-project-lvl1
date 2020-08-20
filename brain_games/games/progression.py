@@ -1,9 +1,8 @@
 # This Python file uses the following encoding: utf-8
 
-"""Progression Game module."""
+"""Progression Brain Game."""
 import random
 
-NAME = 'brain_progression'
 RULE = 'What number is missing in the progression?'
 
 

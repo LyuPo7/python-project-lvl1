@@ -2,6 +2,8 @@
 # This Python file uses the following encoding: utf-8
 import prompt
 
+MAX_INTENT = 3
+
 
 def engine(game, name_player):
     """Engine function.
@@ -14,29 +16,26 @@ def engine(game, name_player):
         game: game to play
         name_player: user's
     """
-    max_intent = 3
-    intent_number = 1
+    counter = 1
 
     print(game.RULE)
 
-    while intent_number <= max_intent:
+    while counter <= MAX_INTENT:
         question, correct_answer = game.generate_round()
         print('Question:', question)
         user_answer = prompt.string(
-            ''.join(['Enter your answer, ', name_player, ': ']),
+            'Enter your answer, {arg}: '.format(arg=name_player),
         )
 
         if (user_answer == correct_answer):
             print('Correct!')
-
-            if (intent_number == max_intent):
-                print('Congratulations, ', name_player, '!')
         else:
-            print(
-                user_answer,
-                ' is wrong answer :(. Correct answer was ',
-                correct_answer,
+            return print(
+                "'{arg1}' is wrong answer :(.Correct answer was '{arg2}'".format(
+                    arg1=user_answer,
+                    arg2=correct_answer,
+                ),
             )
-            break
-
-        intent_number += 1
+        counter += 1
+    else:
+        return print('Congratulations, ', name_player, '!')

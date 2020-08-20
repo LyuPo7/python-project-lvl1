@@ -1,11 +1,10 @@
 # This Python file uses the following encoding: utf-8
 
-"""Prime Game module."""
+"""Prime Brain Game."""
 import random
 
-NAME = 'brain_prime'
-RULE = """"Answer \"yes\" if given number is prime.
-Otherwise answer \"no\"."""
+RULE = """"Answer 'yes' if given number is prime.
+Otherwise answer 'no'."""
 
 
 def check_multiplicity(dividend, divisor):
@@ -39,28 +38,13 @@ def is_prime(number):
         False - if number is not prime.
     """
     check_number = 2
-    while check_number < number:
-        if check_multiplicity(number, check_number):
-            return False
-        check_number += 1
-    return True
-
-
-def bool2word(sign):
-    """Convert bool value to word.
-
-    Converts bool value to word.
-
-    Args:
-        sign(str): sign
-
-    Returns:
-        'yes' - if sign is True,
-        'no' - if sign is False.
-    """
-    if sign:
-        return 'yes'
-    return 'no'
+    if number > 1:
+        while check_number < number / 2:
+            if check_multiplicity(number, check_number):
+                return False
+            check_number += 1
+        return True
+    return False
 
 
 def generate_round():
@@ -73,7 +57,10 @@ def generate_round():
         correct_answer(str)
     """
     number = random.randint(0, 100)
-    correct_answer = bool2word(is_prime(number))
+    if is_prime(number):
+        correct_answer = 'yes'
+    else:
+        correct_answer = 'no'
     question = str(number)
 
     return (question, correct_answer)

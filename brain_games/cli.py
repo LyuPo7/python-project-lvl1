@@ -3,8 +3,8 @@
 """Functions of project."""
 import prompt
 
-from brain_games.games import brain_even, brain_calc, brain_gcd
-from brain_games.games import brain_progression, brain_prime
+from brain_games.games import even, calc, gcd
+from brain_games.games import progression, prime
 from brain_games.engine import engine
 
 
@@ -15,11 +15,11 @@ def generate_games_dict():
 		dictionary(dict) - dictionary of the games,
 	"""
 	return {
-		'0': brain_even,
-		'1': brain_calc,
-		'2': brain_gcd,
-		'3': brain_progression,
-		'4': brain_prime,
+		'0': even,
+		'1': calc,
+		'2': gcd,
+		'3': progression,
+		'4': prime,
 	}
 
 
@@ -44,7 +44,11 @@ def request_choice():
 	print('Choice the game: ')
 	games_dict = generate_games_dict()
 	for number, game in games_dict.items():
-		print(' '.join(['For play', game.NAME, 'enter', number]))
+		print('For play {arg1} enter: {arg2}'.format(
+			arg1=game.__name__,
+			arg2=str(number),
+			),
+		)
 	return prompt.string('Make your choice: ')
 
 

@@ -1,9 +1,8 @@
 # This Python file uses the following encoding: utf-8
 
-"""Calc Game module."""
+"""Calc Brain Game."""
 import random
 
-NAME = 'brain_calc'
 RULE = 'What is the result of the expression?'
 
 
@@ -27,6 +26,9 @@ def generate_round():
     elif operator == '*':
         correct_answer = number_1 * number_2
 
-    question = ' '.join([str(number_1), operator, str(number_2)])
-
+    question = '{arg1} {arg2} {arg3}'.format(
+        arg1=str(number_1),
+        arg2=operator,
+        arg3=str(number_2),
+    )
     return (question, str(correct_answer))

@@ -1,10 +1,9 @@
 # This Python file uses the following encoding: utf-8
 
-"""GCD Game module."""
+"""GCD Brain Game."""
 import random
 import math
 
-NAME = 'brain_gcd'
 RULE = 'Find the greatest common divisor of given numbers.'
 
 
@@ -21,6 +20,8 @@ def generate_round():
     number_2 = random.randint(0, 100)
     correct_answer = math.gcd(number_1, number_2)
 
-    question = ' '.join([str(number_1), ' and ', str(number_2)])
-
+    question = '{arg1} and {arg2}'.format(
+        arg1=str(number_1),
+        arg2=str(number_2),
+    )
     return (question, str(correct_answer))

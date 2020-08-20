@@ -1,9 +1,8 @@
 # This Python file uses the following encoding: utf-8
 
-"""Even game module."""
+"""Even brain game."""
 import random
 
-NAME = 'brain_even'
 RULE = 'Answer \"yes\" if number even otherwise answer \"no\"'
 
 
@@ -24,23 +23,6 @@ def is_even(number):
     return True
 
 
-def bool2word(sign):
-    """Convert bool value to word.
-
-    Converts bool value to word.
-
-    Args:
-        sign(str): sign
-
-    Returns:
-        'yes' - if sign is True,
-        'no' - if sign is False.
-    """
-    if sign:
-        return 'yes'
-    return 'no'
-
-
 def generate_round():
     """One round function of brain_even game.
 
@@ -51,7 +33,11 @@ def generate_round():
         correct answer(str)
     """
     number = random.randint(0, 100)
-    correct_answer = bool2word(is_even(number))
+
+    if is_even(number):
+        correct_answer = 'yes'
+    else:
+        correct_answer = 'no'
 
     question = str(number)
     return (question, correct_answer)

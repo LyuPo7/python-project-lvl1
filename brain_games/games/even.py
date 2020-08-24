@@ -18,9 +18,7 @@ def is_even(number):
         'yes' - if number is even,
         'no' - if number is not even.
     """
-    if (number % 2):
-        return False
-    return True
+    return number % 2 == 0
 
 
 def generate_round():

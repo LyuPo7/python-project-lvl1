@@ -38,4 +38,4 @@ def engine(game, name_player):
             )
         counter += 1
     else:
-        return print('Congratulations, ', name_player, '!')
+        print('Congratulations, ', name_player, '!')

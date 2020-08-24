@@ -30,7 +30,7 @@ def engine(game, name_player):
         if (user_answer == correct_answer):
             print('Correct!')
         else:
-            return print(
+            print(
                 "'{arg1}' is wrong answer :(.Correct answer was '{arg2}'".format(
                     arg1=user_answer,
                     arg2=correct_answer,

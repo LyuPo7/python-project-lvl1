@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "LyuPo7_brain_games"
-version = "7.0.0"
+version = "7.0.1"
 description = "First project with Hexlet"
 authors = ["LyuPo <lport@frtk.ru>"]
 classifiers = [

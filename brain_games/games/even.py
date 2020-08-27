@@ -3,7 +3,7 @@
 """Even brain game."""
 import random
 
-RULE = 'Answer \"yes\" if number even otherwise answer \"no\"'
+RULE = "Answer 'yes' if number even otherwise answer 'no'"
 
 
 def is_even(number):
